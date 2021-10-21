@@ -1,4 +1,4 @@
-require "basic_assert/version"
+require 'basic_assert/version'
 
 module BasicAssert
   class Error < StandardError; end
