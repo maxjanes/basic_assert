@@ -1,22 +1,18 @@
-# BasicAssert
+# Basic Assert
 
-TODO: -
+A basic, customizable assertion library for lightweight pre and post-conditions checking.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Just add this line to your application's Gemfile:
 
 ```ruby
 gem 'basic_assert'
 ```
 
-And then execute:
+## What's this for ?
 
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install basic_assert
+TODO: -
 
 ## Usage
 
