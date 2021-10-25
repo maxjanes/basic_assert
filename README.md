@@ -12,7 +12,7 @@ gem 'basic_assert'
 
 ## What's this for ?
 
-TODO: add rationale and examples
+TODO: add rationale
 
 ## Usage
 
@@ -34,12 +34,24 @@ end
 
 or define your own asserting policies and side effects, or override them for the given `self` where appropriate.
 
+Then, you may add you're precondition checks accordingly:
+
+```ruby
+# plain variants:
+assert condition
+assert condition, message
+
+# block variants, the asserter tells when/if the condition gets evaluated:
+assert { condition block }
+assert(message) { condition block } 
+```
+
 An *asserter* is a concern exposing an `assert()` function responsible of evaluating the given condition; a *raiser* is a concern exposing an `assert_raise()` function responsible of managing the actual condition failure.
 
 Currently, the following asserters and raisers are defined:
 - `BasicAsserter`: exposes plain and block versions, with or without message
 - `NoopAsserter`: does nothing, blocks are never evaluated in this case
-- `ExceptionRaiser`: raises an `ExceptionRaiser::AssertionException`
+- `ExceptionRaiser`: raises an `ExceptionRaiser::AssertionException`; this extends `Exception` and should not be rescued by user code.  
 
 
 ## Development
