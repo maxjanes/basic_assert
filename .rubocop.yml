@@ -14,3 +14,9 @@ Style/FrozenStringLiteralComment:
 
 Metrics/LineLength:
   Max: 120
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/MessageSpies:
+  Enabled: false
