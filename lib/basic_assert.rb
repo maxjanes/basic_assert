@@ -5,16 +5,7 @@ require 'basic_assert/noop_asserter'
 
 # require_relative '../../lib/asserts'
 #
-# class Object
-#   case Rails.configuration.assert_mode
-#   when :raise
-#     include AssertType::AssertMethods
-#     include Asserts::Methods
-#   else # :ignore
-#     include AssertType::NoOpMethods
-#     include Asserts::NoOpMethods
-#   end
-# end
+
 
 # basic_assert
 #

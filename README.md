@@ -16,7 +16,31 @@ TODO: -
 
 ## Usage
 
-TODO: -
+In order to use this library you need to include an *asserter* and a *raiser* in the current `self` context.
+
+In, say, a Rails project, you may just add an initializer like
+
+```ruby
+class Object
+  case Rails.configuration.assert_mode
+  when :raise
+    include BasicAssert::ExceptionRaiser
+    include BasicAssert::BasicAsserter
+  else # :ignore
+    include BasicAssert::NoopAsserter
+  end
+end
+```
+
+or define your own asserting policies and side effects, or override them for the given `self' where appropriate.
+
+An *asserter* is a concern exposing an assert() function responsible of evaluating the given condition; a *raiser* is a concern exposing an assert_raise() function responsible of managing the actual condition failure.
+
+Currently, the following asserters and raisers are defined:
+- BasicAsserter: exposes plain and block versions, with or without message
+- NoopAsserter: does nothing, blocks are never evaluated in this case
+- ExceptionRaiser: raises an ExceptionRaiser::AssertionException
+
 
 ## Development
 
