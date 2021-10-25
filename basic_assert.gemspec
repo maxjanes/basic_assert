@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Massimiliano Janes']
   spec.email         = ['massimiliano.janes@uqido.com']
 
-  spec.summary       = 'A basic, customizable assertion library for lightweight pre-postconditions checking'
+  spec.summary       = 'A basic, customizable assertion gem for lightweight pre-postconditions checking'
   spec.homepage      = 'https://github.com/maxjanes/basic_assert'
   spec.license       = 'MIT'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.3.0')
