@@ -2,6 +2,8 @@
 
 require 'bundler/setup'
 require 'basic_assert'
+require_relative '../spec/support/exceptionally_assertive'
+require_relative '../spec/support/quietly_assertive'
 
 require 'irb'
 IRB.start(__FILE__)
