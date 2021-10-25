@@ -13,6 +13,8 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir['{lib}/**/*', 'CHANGELOG.md', 'README.md']
 
+  spec.add_dependency 'activesupport'
+
   spec.add_development_dependency 'rake', '~> 13.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
 end
