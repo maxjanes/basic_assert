@@ -12,7 +12,7 @@ gem 'basic_assert'
 
 ## What's this for ?
 
-TODO: -
+TODO: add rationale and examples
 
 ## Usage
 
