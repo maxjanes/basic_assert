@@ -51,7 +51,7 @@ An *asserter* is a concern exposing an `assert()` function responsible of evalua
 Currently, the following asserters and raisers are defined:
 - `BasicAsserter`: exposes plain and block versions, with or without message
 - `NoopAsserter`: does nothing, blocks are never evaluated in this case
-- `ExceptionRaiser`: raises an `ExceptionRaiser::AssertionException`; this extends `Exception` and should not be rescued by user code.
+- `ExceptionRaiser`: raises an `AssertionException`. This extends `Exception` and hence should not be rescued by user code.
 
 ## Development
 
