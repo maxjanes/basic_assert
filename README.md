@@ -26,7 +26,8 @@ In, say, a Rails project, you may just add an initializer like
 
 ```ruby
 class Object
-  case Rails.configuration.assert_mode
+  # pretending an assert_mode configuration value exists ...
+  case Rails.configuration.assert_mode 
   when :raise
     include BasicAssert::ExceptionRaiser
     include BasicAssert::BasicAsserter
@@ -53,8 +54,8 @@ assert(message) { condition block }
 An *asserter* is a concern exposing an `assert()` function responsible of evaluating the given condition; a *raiser* is a concern exposing an `assert_raise()` function responsible of managing the actual condition failure.
 
 Currently, the following asserters and raisers are defined:
-- `BasicAsserter`: exposes plain and block versions, with or without message
-- `NoopAsserter`: does nothing, blocks are never evaluated in this case
+- `BasicAsserter`: exposes plain and block versions, with or without message.
+- `NoopAsserter`: does nothing, blocks are never evaluated in this case.
 - `ExceptionRaiser`: raises an `AssertionException`. This extends `Exception` and hence should not be rescued by user code.
 
 ## Development
