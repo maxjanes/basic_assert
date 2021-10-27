@@ -34,7 +34,7 @@ end
 
 or define your own asserting policies and side effects, or override them for the given `self` where appropriate.
 
-Then, you may add you're precondition checks accordingly:
+Then, you may add your precondition checks accordingly:
 
 ```ruby
 # plain variants:
