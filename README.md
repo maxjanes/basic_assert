@@ -12,7 +12,11 @@ gem 'basic_assert'
 
 ## What's this for ?
 
-TODO: add rationale
+Ruby misses an idiomatic, standard module for precondition and invariant checking. A precondition violation differs from other error conditions in that it's not recoverable in any meaningful way. This is in contrast with, say, errors that are part of the expected flow of execution or errors that are exceptional but recoverable.
+
+The only thing you know when a precondition is violated is that some condition that you expected to hold true actually did not. Why such a thing happened and what consequences it will have on your program execution you generally don't know.
+
+For this reason, assertion tools used for this purpose (like good ol' C assert) do not usually have a fixed behaviour on failure, but rather allow for customizing it in a domain, project or build specific way.
 
 ## Usage
 
